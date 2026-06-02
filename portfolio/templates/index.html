@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.name }} | Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Все главные секции теперь строго центрируют контент */
+        .hero-section {
+            background: linear-gradient(180deg, #ffffff 30%, #f4ecfb 100%);
+            padding: 140px 0 80px 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-purple-custom {
+            background: linear-gradient(135deg, #8a4fff 0%, #6f2cf3 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 45px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(111, 44, 243, 0.2);
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        .btn-purple-custom:hover {
+            background: linear-gradient(135deg, #9b66ff 0%, #7d3eff 100%);
+            color: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(111, 44, 243, 0.35);
+        }
+
+        .advantages-section {
+            background: radial-gradient(circle at 50% 50%, #f2e9fc 0%, #f9f5fe 50%, #ffffff 100%);
+            padding: 90px 0;
+        }
+
+        .advantage-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 35px !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-align: center; /* Текст преимуществ по центру */
+        }
+        .advantage-title {
+            color: #5c1ee3;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        /* СЕКЦИЯ: ГЛАВНЫЙ СХОУРИЛ-ПРЕЗЕНТАЦИЯ */
+        .showcase-section {
+            background: #ffffff;
+            padding: 60px 0 60px 0;
+        }
+        .showcase-container {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(138, 79, 255, 0.15);
+            border-radius: 32px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(111, 44, 243, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .showcase-video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            background: #110924;
+            margin: 0 auto;
+        }
+        .showcase-video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* СЕКЦИЯ КАРТОЧЕК ПОРТФОЛИО */
+        .portfolio-section {
+            background: #ffffff;
+            padding: 40px 0 120px 0;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(230, 220, 245, 0.6);
+            border-radius: 24px;
+            padding: 20px !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(111, 44, 243, 0.02);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .video-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(138, 79, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(111, 44, 243, 0.06);
+        }
+        
+        .card-video-placeholder {
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #2c1a4d, #110924);
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .placeholder-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #9b72f1;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .btn-open-video {
+            background: #f1ebfc;
+            color: #6f2cf3;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 35px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: auto;
+        }
+        .btn-open-video:hover {
+            background: #6f2cf3;
+            color: #ffffff;
+        }
+
+        .btn-linkedin {
+            background: linear-gradient(135deg, #0077b5 0%, #005988 100%);
+            color: #ffffff !important;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 45px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(0, 119, 181, 0.25);
+            margin: 0 auto;
+        }
+
+        /* Темная кино-модалка */
+        .modal-content {
+            background-color: #0b0c10;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .modal-header {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .btn-close-white {
+            filter: invert(1);
+        }
+
+        /* Динамический размер для вертикальных видео (TikTok) */
+        @media (min-width: 576px) {
+            .modal-dialog.vertical-mode {
+                max-width: 420px;
+            }
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+    <!-- HERO ОБЛОЖКА (ВСЁ ПО ЦЕНТРУ) -->
+    <section class="hero-section text-center">
+        <div class="container" style="max-width: 800px;">
+            <h1 class="display-3 fw-bold mb-3" style="letter-spacing: -2px;">{{ data.name }}</h1>
+            <p class="fs-4 fw-light mb-4" style="color: #6f2cf3 !important; font-weight: 500;">{{ data.role }}</p>
+            <p class="fs-5 text-muted mb-5 lh-lg" style="max-width: 720px; margin: 0 auto;">{{ data.bio }}</p>
+            <a href="#showcase" class="btn btn-purple-custom btn-lg">Watch Showcase</a>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ПРЕИМУЩЕСТВ (ВСЁ ПО ЦЕНТРУ) -->
+    <section class="advantages-section text-center">
+        <div class="container" style="max-width: 940px;">
+            <h2 class="fw-bold mb-5 display-6" style="letter-spacing: -1px;">Why Work With Me</h2>
+            <div class="row g-4 justify-content-center">
+                {% for adv in data.advantages %}
+                    <div class="col-md-6">
+                        <div class="card advantage-card h-100">
+                            <h4 class="fw-bold mb-3 advantage-title">{{ adv.title }}</h4>
+                            <p class="text-muted mb-0" style="font-size: 0.98rem; line-height: 1.6;">{{ adv.desc }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ГЛАВНЫЙ ПРЕЗЕНТАЦИОННЫЙ ШОУРИЛ (ПО ЦЕНТРУ) -->
+    <section id="showcase" class="showcase-section text-center">
+        <div class="container" style="max-width: 940px;">
+            <div class="showcase-container">
+                <h2 class="fw-bold mb-3 display-6" style="letter-spacing: -1px;">My Showcase Reel</h2>
+                <p class="text-muted mb-4">Главная презентация моих навыков и портфолио. Нажмите Play для просмотра.</p>
+                
+                <div class="showcase-video-wrapper">
+                    <!-- Замени dQw4w9WgXcQ на ID своего главного видео презентации -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ОСТАЛЬНЫХ РАБОТ (СЕТКА С ТИКТОКОМ) -->
+    <section id="works" class="portfolio-section text-center">
+        <div class="container" style="max-width: 940px;">
+            <h3 class="fw-bold mb-5 display-6" style="letter-spacing: -0.5px; color: #1a1a1a;">Featured Projects</h3>
+            <div class="row g-4 justify-content-center">
+                {% for work in data.portfolio %}
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card video-card w-100">
+                            
+                            <div class="card-video-placeholder" onclick="openVideoModal('{{ work.url }}', '{{ work.title }}')">
+                                <div class="placeholder-text">[{{ work.platform | upper }} PROJECT]</div>
+                            </div>
+
+                            <h5 class="fw-bold fs-6 mb-3 px-1 mt-2" style="color: #1a1a1a; min-height: 44px;">{{ work.title }}</h5>
+                            
+                            <button class="btn btn-open-video" onclick="openVideoModal('{{ work.url }}', '{{ work.title }}')">
+                                Open Video
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ (ПО ЦЕНТРУ) -->
+    <footer class="text-center py-5 bg-white border-top">
+        <div class="container py-3 d-flex flex-column align-items-center">
+            <p class="text-muted mb-4 fs-5">Let's create high-retention content together.</p>
+            <a href="{{ data.linkedin }}" target="_blank" class="btn-linkedin">Connect on LinkedIn</a>
+            <p class="mt-5 text-black-50" style="font-size: 0.8rem;">&copy; 2026 {{ data.name }}. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- УМНОЕ КИНО-МОДАЛЬНОЕ ОКНО (ПОДДЕРЖИВАЕТ ТИКТОК И ЮТУБ) -->
+    <div class="modal fade" id="portfolioVideoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" id="modalDialogStyle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white fw-bold" id="modalVideoTitle">Video Player</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" onclick="stopModalVideo()"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="modalVideoPlayerContainer" style="position: relative; width: 100%; height: 0; background: #000;">
+                        <!-- Видео загрузится сюда динамически через JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ЕДИНЫЙ СКРИПТ ДЛЯ КРАСИВОЙ ОБРАБОТКИ ССЫЛОК -->
+    <script>
+        let videoModalObj = null;
+
+        function openVideoModal(url, title) {
+            document.getElementById('modalVideoTitle').innerText = title;
+            const container = document.getElementById('modalVideoPlayerContainer');
+            const dialog = document.getElementById('modalDialogStyle');
+            
+            let embedUrl = '';
+            let isTikTok = false;
+
+            // 1. Алгоритм для TikTok
+            if (url.includes('tiktok.com')) {
+                isTikTok = true;
+                const matches = url.match(/\/video\/(\d+)/);
+                if (matches && matches[1]) {
+                    embedUrl = 'https://www.tiktok.com/embed/v2/' + matches[1];
+                } else {
+                    embedUrl = url;
+                }
+            } 
+            // 2. Алгоритм для YouTube
+            else if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                let videoId = '';
+                if (url.includes('youtube.com/watch')) {
+                    let urlParams = new URLSearchParams(new URL(url).search);
+                    videoId = urlParams.get('v');
+                } else if (url.includes('youtu.be/')) {
+                    videoId = url.split('youtu.be/')[1].split(/[?#]/)[0];
+                }
+                embedUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+            } 
+            // 3. Алгоритм для Vimeo
+            else if (url.includes('vimeo.com')) {
+                let videoId = url.split('vimeo.com/')[1].split(/[?#]/)[0];
+                embedUrl = 'https://player.vimeo.com/video/' + videoId + '?autoplay=1';
+            } else {
+                embedUrl = url;
+            }
+
+            // Настраиваем пропорции окна (вертикальное для TikTok, горизонтальное для остальных)
+            if (isTikTok) {
+                dialog.classList.add('vertical-mode');
+                container.style.paddingBottom = '177.77%'; // Формат 9:16
+            } else {
+                dialog.classList.remove('vertical-mode');
+                container.style.paddingBottom = '56.25%'; // Формат 16:9
+            }
+
+            // Вставляем фрейм плеера
+            container.innerHTML = `<iframe src="${embedUrl}" allow="autoplay; fullscreen" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"></iframe>`;
+
+            if(!videoModalObj) {
+                videoModalObj = new bootstrap.Modal(document.getElementById('portfolioVideoModal'));
+            }
+            videoModalObj.show();
+        }
+
+        function stopModalVideo() {
+            document.getElementById('modalVideoPlayerContainer').innerHTML = '';
+        }
+
+        document.getElementById('portfolioVideoModal').addEventListener('hidden.bs.modal', function () {
+            stopModalVideo();
+        });
+    </script>
+</body>
+</html>
