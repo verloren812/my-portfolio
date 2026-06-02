@@ -30,16 +30,18 @@ def index():
             {
                 "title": "Commercial Video Reel",
                 "platform": "YouTube",
-                "url": "https://www.tiktok.com/@aimstarshq/video/7621939553061965089"
+                "url": "https://www.tiktok.com/@aimstarshq/video/7621939553061965089" # Твоя ссылка
             },
             {
                 "title": "TikTok Viral Trend Edit",
                 "platform": "TikTok",
-                "url": "https://www.tiktok.com/@aimstarshq/video/..." 
+                "url": "https://youtu.be/RlireGjAfiA" # Ссылка на любой ТикТок
+            },
+            {
+                "title": "Motion Graphics Showreel",
+                "platform": "Vimeo",
+                "url": "https://www.tiktok.com/@nawyfps/video/7632614572423253281" # Твоя ссылка
             }
         ]
     }
     return render_template('index.html', data=data)
-
-if __name__ == '__main__':
-    app.run()
