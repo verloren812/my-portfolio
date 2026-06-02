@@ -18,7 +18,14 @@ def index():
                 "title": "Social Media Expertise", 
                 "desc": "3 years of managing social channels, knowing exactly what hooks the audience."
             }
-        ],
+       },
+            {
+                "title": "Proven Sales Impact",
+                "desc": "Lead editor for a major media group: my videos generated massive sales during the product launch."
+            },
+            {
+                "title": "Maximum Retention",
+                "desc": "Ad integrations consistently achieve near-100% watch time due to professional pacing." ],
         "portfolio": [
             {
                 "title": "Commercial Video Reel",
