@@ -26,7 +26,7 @@ def index():
                 "desc": "Ad integrations consistently achieve near-100% watch time due to professional pacing."
             }
         ],
-        "portfolio": [
+         "portfolio": [
             {
                 "title": "Commercial Video Reel",
                 "platform": "YouTube",
@@ -45,3 +45,6 @@ def index():
         ]
     }
     return render_template('index.html', data=data)
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
