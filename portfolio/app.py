@@ -49,7 +49,7 @@ def index():
           {
                 "title": " Performance Marketing TikTok Ad",
                 "platform": "TikTok",
-                "url": "https://www.tiktok.com/@aimstarshq/video/7627560005008379169",
+                "url": "https://www.tiktok.com/@areagodvlr/video/7603028749776407840",
                 "image": "marketing.jpg"
             },
             {
