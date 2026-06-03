@@ -42,7 +42,7 @@ def index():
             {
                 "title": "Viral YouTube Project",
                 "platform": "YouTube",
-                "url": " https://youtu.be/8x1Nbj4J3pc?si=nArL0yV75mirbfc7", # Твоя ссылка
+                "url": " https://www.youtube.com/watch?v=rIqoK-alAXM", # Твоя ссылка
                 "image": "https://img.youtube.com/vi/8x1Nbj4J3pc/mqdefault.jpg"
             },
           {
