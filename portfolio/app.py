@@ -43,7 +43,7 @@ def index():
                 "title": "Viral YouTube Project",
                 "platform": "YouTube",
                 "url": " https://www.youtube.com/watch?v=rIqoK-alAXM", # Твоя ссылка
-                "image": "https://img.youtube.com/vi/8x1Nbj4J3pc/mqdefault.jpg"
+                "image": "Viral YouTube Project.jpg"
             },
           {
                 "title": " Performance Marketing TikTok Ad",
@@ -55,7 +55,7 @@ def index():
                 "title": "Top-Converting Social Commerce Edit",
                 "platform": "YouTube",
                 "url": "https://youtu.be/SvGQ9py24gY?si=VNXZgsyrlgybnhoB",
-                "image": "https://img.youtube.com/vi/SvGQ9py24gY/mqdefault.jpg"
+                "image": "Top-Converting Social Commerce Edit.jpg"
             }
         ]
     }
