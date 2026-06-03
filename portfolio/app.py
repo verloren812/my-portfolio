@@ -31,6 +31,7 @@ def index():
                 "title": " Product review/showcase",
                 "platform": "TikTok",
                 "url": "https://www.tiktok.com/@nawyfps/video/7632614572423253281" # Твоя ссылка
+                "image": "https://via.placeholder.com/400x225?text=TikTok+Video"
             },
             {
                 "title": "Silo Demo Showcase",
@@ -42,16 +43,19 @@ def index():
                 "title": "Viral YouTube Project",
                 "platform": "YouTube",
                 "url": " https://youtu.be/8x1Nbj4J3pc?si=nArL0yV75mirbfc7" # Твоя ссылка
+                "image": "https://img.youtube.com/vi/8x1Nbj4J3pc/mqdefault.jpg"
             },
-        {
+          {
                 "title": " Performance Marketing TikTok Ad",
                 "platform": "TikTok",
                 "url": "https://www.tiktok.com/@aimstarshq/video/7621939553061965089"
+                "image": "https://via.placeholder.com/400x225?text=TikTok+Video"
             },
             {
                 "title": "Top-Converting Social Commerce Edit",
                 "platform": "YouTube",
                 "url": "https://youtu.be/SvGQ9py24gY?si=VNXZgsyrlgybnhoB"
+                "image": "https://img.youtube.com/vi/SvGQ9py24gY/mqdefault.jpg"
             }
         ]
     }
