@@ -28,19 +28,19 @@ def index():
         ],
          "portfolio": [
             {
-                "title": "Commercial Video Reel",
+                "title": " Product review/showcase",
                 "platform": "Tik tok",
-                "url": "https://www.tiktok.com/@aimstarshq/video/7621939553061965089" # Твоя ссылка
+                "url": "https://www.tiktok.com/@nawyfps/video/7632614572423253281" # Твоя ссылка
             },
             {
                 "title": "Silo Demo Showcase",
                 "platform": "YouTube",
-                "url": "https://youtu.be/RlireGjAfiA" # Ссылка на любой ТикТок
+                "url": " https://youtu.be/rIqoK-alAXM" # Ссылка на любой ТикТок
             },
             {
-                "title": "Motion Graphics Showreel",
-                "platform": "Vimeo",
-                "url": "https://www.tiktok.com/@nawyfps/video/7632614572423253281" # Твоя ссылка
+                "title": "Viral YouTube Project",
+                "platform": "YouTube",
+                "url": " https://youtu.be/8x1Nbj4J3pc?si=nArL0yV75mirbfc7" # Твоя ссылка
             }
         ]
     }
