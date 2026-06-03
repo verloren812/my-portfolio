@@ -50,7 +50,7 @@ def index():
                 "title": " Performance Marketing TikTok Ad",
                 "platform": "TikTok",
                 "url": "https://www.tiktok.com/@nawyfps/video/7646446101385547041?_r=1&_t=ZG-96un3vMSVKj",
-                "image": "marketing.jpg"
+                "image": "Performance Marketing TikTok ad1.jpg.png"
             },
             {
                 "title": "Top-Converting Social Commerce Edit",
