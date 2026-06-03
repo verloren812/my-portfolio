@@ -8,6 +8,7 @@ def index():
         "name": "Maksym Havrysh",
         "role": "Video Editor / Motion Designer",
         "bio": "Video Editor/Motion Designer with 3-4 years of experience. I craft high-retention video content that drives sales. Former lead editor for a major media group.",
+        "linkedin": "https://www.linkedin.com/in/maksym-havrysh-72b7b9413/",
         "advantages": [
             {
                 "title": "3-4 Years of Experience",
