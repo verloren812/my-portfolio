@@ -37,7 +37,7 @@ def index():
                 "title": "Silo Demo Showcase",
                 "platform": "YouTube",
                 "url": " https://youtu.be/rIqoK-alAXM", # Ссылка на любой ТикТок
-                "image": "https://img.youtube.com/vi/riQoK-aLAXM/mqdefault.jpg"
+                "image": "https://img.youtube.com/vi/riQoK-aLAXM/0.jpg"
             },
             {
                 "title": "Viral YouTube Project",
