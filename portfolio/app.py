@@ -29,12 +29,12 @@ def index():
          "portfolio": [
             {
                 "title": "Commercial Video Reel",
-                "platform": "YouTube",
+                "platform": "Tik tok",
                 "url": "https://www.tiktok.com/@aimstarshq/video/7621939553061965089" # Твоя ссылка
             },
             {
-                "title": "TikTok Viral Trend Edit",
-                "platform": "TikTok",
+                "title": "Silo Demo Showcase",
+                "platform": "YouTube",
                 "url": "https://youtu.be/RlireGjAfiA" # Ссылка на любой ТикТок
             },
             {
