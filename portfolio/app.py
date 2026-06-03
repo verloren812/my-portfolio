@@ -41,7 +41,7 @@ def index():
                 "title": "Viral YouTube Project",
                 "platform": "YouTube",
                 "url": " https://youtu.be/8x1Nbj4J3pc?si=nArL0yV75mirbfc7" # Твоя ссылка
-            }
+            },
         {
                 "title": " Performance Marketing TikTok Ad",
                 "platform": "TikTok",
