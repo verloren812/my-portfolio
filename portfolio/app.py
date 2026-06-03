@@ -31,13 +31,13 @@ def index():
                 "title": " Product review/showcase",
                 "platform": "TikTok",
                 "url": "https://www.tiktok.com/@nawyfps/video/7632614572423253281", # Твоя ссылка
-                "image": "/product.jpg"
+                "image": "product.jpg"
             },
             {
                 "title": "Silo Demo Showcase",
                 "platform": "YouTube",
                 "url": " https://youtu.be/rIqoK-alAXM", # Ссылка на любой ТикТок
-                "image": "/silo.jpg"
+                "image": "silo.jpg"
             },
             {
                 "title": "Viral YouTube Project",
@@ -49,7 +49,7 @@ def index():
                 "title": " Performance Marketing TikTok Ad",
                 "platform": "TikTok",
                 "url": "https://www.tiktok.com/@aimstarshq/video/7621939553061965089",
-                "image": "/marketing.jpg"
+                "image": "marketing.jpg"
             },
             {
                 "title": "Top-Converting Social Commerce Edit",
